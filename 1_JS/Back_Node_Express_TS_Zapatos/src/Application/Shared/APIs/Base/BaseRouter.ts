@@ -1,17 +1,16 @@
 import { Router } from 'express'
-import RoutesPath from '../Enums/Routes'
-import IRouter from './CRUD/Interfaces/IRouter'
+import Routes from '../Enums/Routes'
+import IRouter from './Interfaces/IRouter'
 
 export default abstract class BaseRouter implements IRouter {
-  BasePath: RoutesPath;
+  abstract BasePath : Routes;
 
   Router: Router;
 
   /**
    *
    */
-  constructor(basePath : RoutesPath) {
-    this.BasePath = basePath
+  constructor() {
     this.Router = Router()
   }
 
