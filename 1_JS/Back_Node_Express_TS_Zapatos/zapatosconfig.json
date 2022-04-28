@@ -1,0 +1,6 @@
+{
+  "db": {
+    "connectionString": "postgresql://leandro_parisi:123deolivera4@127.0.0.1/BOILERPLATE"
+  },
+  "outDir": "./src/Infrastructure/Database/Schemas"
+}

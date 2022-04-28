@@ -1,0 +1,71 @@
+{
+  "name": "backEnd_whatsappBot",
+  "version": "1.0.0",
+  "description": "Back end for whatsapp Bot",
+  "main": "index.js",
+  "engines": {
+    "node": "v14.10.0"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "post-deploy": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.ts",
+    "seed": "npx sequelize-cli db:seed:all --debug",
+    "unseed": "npx sequelize-cli db:seed:undo:all --debug",
+    "migrate": "npx sequelize-cli db:migrate --debug",
+    "unmigrate": "npx sequelize-cli db:migrate:undo:all --debug",
+    "db:up": "npx sequelize-cli db:create --debug",
+    "db:down": "npx sequelize-cli db:drop --debug",
+    "up": "npm run migrate && npm run seed",
+    "down": "npm run unseed && npm run unmigrate",
+    "createRoute": "sh ./templates/2.new_route.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeandroParisi/backEnd_whatsappBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeandroParisi/backEnd_whatsappBot/issues"
+  },
+  "homepage": "https://github.com/LeandroParisi/backEnd_whatsappBot#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "cpf-cnpj-validator": "^1.0.3",
+    "date-fns-tz": "^1.2.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.10.0",
+    "uuid": "^8.3.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^17.0.29",
+    "@types/yup": "^0.29.13",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}
