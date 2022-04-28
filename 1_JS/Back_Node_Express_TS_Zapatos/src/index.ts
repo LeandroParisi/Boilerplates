@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import * as dotenv from 'dotenv'
 import HealthCheck from './Application/Shared/Middlewares/HealthCheck/HealthCheck'
+import swaggerUi from 'swagger-ui-express'
 
 dotenv.config()
 
@@ -32,7 +33,17 @@ class Server {
   public Setup() {
     this.app.use(cors(corsOptions))
     this.app.use(express.json())
+    this.app.use(express.static('public'))
     this.app.use(cookieParser())
+    this.app.use(
+      '/docs',
+      swaggerUi.serve,
+      swaggerUi.setup(undefined, {
+        swaggerOptions: {
+          url: '/swagger.json',
+        },
+      }),
+    )
   }
 
   public Start() {
