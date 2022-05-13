@@ -1,0 +1,10 @@
+{
+  "swagger-auto-gen": "https://www.npmjs.com/package/swagger-autogen",
+  "express-swagger-generator": "https://www.npmjs.com/package/express-swagger-generator",
+  "config": "https://www.npmjs.com/package/config",
+  "type-script-auto-gen-swagger": "https://rsbh.dev/blog/rest-api-with-express-typescript",
+  "routing-controllers": "https://github.com/typestack/routing-controllers",
+  "typeorm": {
+    "connection-options": "https://orkhan.gitbook.io/typeorm/docs/connection-options#postgres--cockroachdb-connection-options"
+  }
+}
