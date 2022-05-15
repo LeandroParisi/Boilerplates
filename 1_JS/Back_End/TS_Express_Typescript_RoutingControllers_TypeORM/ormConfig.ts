@@ -27,9 +27,6 @@ const connections = {
     migrations: [
       path.join(__dirname, "Migrations", "*.*")
     ],
-    extra: {
-      ssl: true
-    },
   }
 } as IDictionary<DataSourceOptions>
 

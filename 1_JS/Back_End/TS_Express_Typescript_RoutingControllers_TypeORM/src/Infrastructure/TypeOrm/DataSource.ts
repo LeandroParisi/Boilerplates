@@ -9,25 +9,7 @@ const databaseUrl : string = constants.CONNECTION_STRING;
 const connectionOptions = PostgressConnectionStringParser.parse(databaseUrl);
 
 
-const AppDataSource = new DataSource({
-  name: constants.ENVS.LOCAL,
-  type: "postgres",
-  host: connectionOptions.host,
-  port: +connectionOptions.port,
-  username: connectionOptions.user,
-  password: connectionOptions.password,
-  database: connectionOptions.database,
-  synchronize: true,
-  migrationsRun: true,
-  dropSchema: false,
-  entities: [
-    path.join(__dirname, "..", "Entities", "**", "*.*"),
-    path.join(__dirname, "..", "Entities", "*.*")
-  ],
-  migrations: [
-    path.join(__dirname, "Migrations", "*.*")
-  ],
-})
+const AppDataSource = new DataSource(envConfiguration)
 
 AppDataSource.initialize()
   .then(() => {
