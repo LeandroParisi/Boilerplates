@@ -4,6 +4,7 @@ import * as PostgressConnectionStringParser from "pg-connection-string";
 import constants from "./src/Configuration/constants";
 import IDictionary from "./src/Commons/Interfaces/SystemInterfaces/IDictionary";
 
+
 const databaseUrl : string = constants.CONNECTION_STRING;
 const connectionOptions = PostgressConnectionStringParser.parse(databaseUrl);
 
@@ -27,7 +28,7 @@ const connections = {
       path.join(__dirname, "Migrations", "*.*")
     ],
     extra: {
-        ssl: true
+      ssl: true
     },
   }
 } as IDictionary<DataSourceOptions>

@@ -14,9 +14,11 @@
     "build": "tsc",
     "start": "npm run build && node build/src/index.js",
     "lint": "tsc && eslint",
-    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js -d ./src/Infrastructure/TypeOrm/DataSource.ts",
-    "migration:generate": "yarn run typeorm migration:generate -n",
-    "migration:blank": "yarn run typeorm migration:create -n",
+    "typeorm": "typeorm-ts-node-esm",
+    "migrate:up": "dotenv cross-var -- npm run typeorm migration:run -- -d %TYPEORM_DATASOURCE_PATH%",
+    "migrate:create": "dotenv cross-var -- npm run typeorm migration:create -- %TYPEORM_MIGRATIONS_PATH%/ARGUMENT",
+
+    "te": "dotenv cross-var -- npm run typeorm migration:generate -- %TYPEORM_ENTITIES_PATH%/_TEMPLATE.ts -d %TYPEORM_DATASOURCE_PATH% --dr",
     "db:up": ""
   },
   "repository": {
@@ -42,6 +44,8 @@
     "cors": "^2.8.5",
     "cpf-cnpj-validator": "^1.0.3",
     "date-fns-tz": "^1.2.2",
+    "cross-var": "1.1.0",
+    "dotenv-cli": "3.0.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "joi": "^17.6.0",

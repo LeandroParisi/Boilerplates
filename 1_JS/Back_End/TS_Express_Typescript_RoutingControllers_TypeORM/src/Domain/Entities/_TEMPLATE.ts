@@ -1,8 +1,11 @@
-import { Entity, Column } from "typeorm"
+import { Entity, Column, PrimaryGeneratedColumn } from "typeorm"
 
-@Entity()
+@Entity({
+  name: "template"
+})
 export class Template {
     @Column()
+    @PrimaryGeneratedColumn()
     id: number
 
     @Column()
