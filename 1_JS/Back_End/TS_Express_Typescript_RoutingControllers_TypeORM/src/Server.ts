@@ -15,35 +15,20 @@ export class Server {
   private readonly port: number = constants.PORT;
 
   public Start() {
-    // process.on('uncaughtException', this.CriticalErrorHandler)
-    // process.on('unhandledRejection', this.CriticalErrorHandler)
-
     this.app.use(this.AllowCors)
     this.app.use(bodyParser.urlencoded({ extended: true }))
     this.app.use(bodyParser.json())
     this.app.use(morgan('dev', { skip: () => !Logger.logFile }))
 
     // ROUTES
-
-
     this.app.use('health', HealthCheck.ExecuteAsync)
-
-    // const swaggerDocument = require('../build/swagger.json')
-
-    // this.app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
     const listen = this.app.listen(this.port)
 
-    // this.OpenSwaggerUi()
-
     Logger.info(`${constants.ENV} server running on port: ${this.port}`)
+    
     return listen
   }
-
-  // private CriticalErrorHandler(...args) {
-  //   Logger.error('Critical Error...', ...args)
-  //   process.exit(1)
-  // }
 
   private AllowCors(_req: express.Request, res: express.Response, next: express.NextFunction): void {
     res.header('Access-Control-Allow-Origin', '*')
@@ -53,11 +38,4 @@ export class Server {
     )
     next()
   }
-
-  // private OpenSwaggerUi() {
-  //   if (constants.ENV === 'local') {
-  //     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  //     require('open')(`http://localhost:${constants.PORT}/swagger`)
-  //   }
-  // }
 }

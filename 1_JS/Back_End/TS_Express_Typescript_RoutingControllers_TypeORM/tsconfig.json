@@ -1,27 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "esModuleInterop": true, /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "removeComments": false,
-    "noImplicitReturns": true,
-    "noImplicitAny": false,
-    "preserveConstEnums": true,
-    "resolveJsonModule": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "outDir": "./build",
-    "rootDirs": [
-      "./src",
-    ]
-  },
-  "exclude": [
-    "logs",
-    "node_modules",
-    "info",
-    "build",
-    "tests"
+   "compilerOptions": {
+      "lib": [
+         "es5",
+         "es6"
+      ],
+      "target": "es5",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "./build",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "esModuleInterop": true
+   },
+   "exclude": [
+    "node_modules"
   ]
 }

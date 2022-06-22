@@ -1,0 +1,157 @@
+[
+  {
+    "name": "food",
+    "columns": [
+      {
+        "name": "calories",
+        "isNullable": false,
+        "hasDefault": false,
+        "typeId": 1700,
+        "typeName": "NUMERIC"
+      },
+      {
+        "name": "id",
+        "isNullable": false,
+        "hasDefault": true,
+        "typeId": 23,
+        "typeName": "INTEGER"
+      },
+      {
+        "name": "isActive",
+        "isNullable": true,
+        "hasDefault": true,
+        "typeId": 16,
+        "typeName": "BOOL"
+      },
+      {
+        "name": "name",
+        "isNullable": false,
+        "hasDefault": false,
+        "typeId": 1043,
+        "typeName": "VARCHAR"
+      },
+      {
+        "name": "price",
+        "isNullable": true,
+        "hasDefault": false,
+        "typeId": 1700,
+        "typeName": "NUMERIC"
+      },
+      {
+        "name": "taken_at",
+        "isNullable": true,
+        "hasDefault": true,
+        "typeId": 1114,
+        "typeName": "TIMESTAMP"
+      },
+      {
+        "name": "user_id",
+        "isNullable": true,
+        "hasDefault": false,
+        "typeId": 23,
+        "typeName": "INTEGER"
+      }
+    ]
+  },
+  {
+    "name": "pgmigrations",
+    "columns": [
+      {
+        "name": "id",
+        "isNullable": false,
+        "hasDefault": true,
+        "typeId": 23,
+        "typeName": "INTEGER"
+      },
+      {
+        "name": "name",
+        "isNullable": false,
+        "hasDefault": false,
+        "typeId": 1043,
+        "typeName": "VARCHAR"
+      },
+      {
+        "name": "run_on",
+        "isNullable": false,
+        "hasDefault": false,
+        "typeId": 1114,
+        "typeName": "TIMESTAMP"
+      }
+    ]
+  },
+  {
+    "name": "user",
+    "columns": [
+      {
+        "name": "created_at",
+        "isNullable": true,
+        "hasDefault": true,
+        "typeId": 1114,
+        "typeName": "TIMESTAMP"
+      },
+      {
+        "name": "daily_calories_threshold",
+        "isNullable": true,
+        "hasDefault": true,
+        "typeId": 23,
+        "typeName": "INTEGER"
+      },
+      {
+        "name": "email",
+        "isNullable": false,
+        "hasDefault": false,
+        "typeId": 1043,
+        "typeName": "VARCHAR"
+      },
+      {
+        "name": "id",
+        "isNullable": false,
+        "hasDefault": true,
+        "typeId": 23,
+        "typeName": "INTEGER"
+      },
+      {
+        "name": "isActive",
+        "isNullable": true,
+        "hasDefault": true,
+        "typeId": 16,
+        "typeName": "BOOL"
+      },
+      {
+        "name": "monthly_expenses_threshold",
+        "isNullable": true,
+        "hasDefault": true,
+        "typeId": 23,
+        "typeName": "INTEGER"
+      },
+      {
+        "name": "name",
+        "isNullable": false,
+        "hasDefault": false,
+        "typeId": 1043,
+        "typeName": "VARCHAR"
+      },
+      {
+        "name": "password",
+        "isNullable": false,
+        "hasDefault": false,
+        "typeId": 1043,
+        "typeName": "VARCHAR"
+      },
+      {
+        "name": "role",
+        "isNullable": true,
+        "hasDefault": false,
+        "typeId": 90823,
+        "typeName": "ROLES"
+      },
+      {
+        "name": "updated_at",
+        "isNullable": true,
+        "hasDefault": false,
+        "typeId": 1114,
+        "typeName": "TIMESTAMP"
+      }
+    ]
+  }
+]

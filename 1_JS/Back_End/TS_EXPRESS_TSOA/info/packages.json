@@ -3,5 +3,7 @@
   "express-swagger-generator": "https://www.npmjs.com/package/express-swagger-generator",
   "config": "https://www.npmjs.com/package/config",
   "type-script-auto-gen-swagger": "https://rsbh.dev/blog/rest-api-with-express-typescript",
-  "inversify": "https://inversify.io/"
+  "inversify": "https://inversify.io/",
+  "pg-typed": "https://www.atdatabases.org/docs/pg-guide-typescript",
+  "pg-migrate": "https://salsita.github.io/node-pg-migrate/"
 }

@@ -13,7 +13,11 @@
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
     "build": "tsoa spec-and-routes && tsc",
     "start": "node build/src/index.js",
-    "lint": "tsc && eslint"
+    "lint": "tsc && eslint",
+    "migrate": "node-pg-migrate",
+    "generate-schema": "npx @databases/pg-schema-cli --database postgres://leandro_parisi:123deolivera4@localhost:5432/template --directory src/Infrastructure/DbConnections/PostgresTyped/Schemas/__generated__",
+    "db:up": "npm run migrate up && npm run generate-schema",
+    "db:rs": "npm run migrate down && npm run migrate up && npm run generate-schema"
   },
   "repository": {
     "type": "git",
@@ -27,8 +31,11 @@
   },
   "homepage": "TEMPLATE",
   "dependencies": {
+    "@databases/pg-schema-cli": "^4.3.0",
+    "@databases/pg-typed": "^4.3.0",
     "axios": "^0.25.0",
     "bcrypt": "^5.0.1",
+    "config": "^3.3.7",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "cpf-cnpj-validator": "^1.0.3",
@@ -41,7 +48,8 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.0",
     "multer": "^1.3.0",
-    "pg": "^8.6.0",
+    "node-pg-migrate": "^6.2.1",
+    "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.0.0",
     "sequelize-cli": "^4.0.0",
