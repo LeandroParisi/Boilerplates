@@ -1,6 +1,5 @@
-import React from 'react'
 import Loader from 'assets/Loaders/Loader'
-import { getImage } from '../../assets/Loaders/loaderDictionary'
+import { getImage } from '../../Assets/Loaders/loaderDictionary'
 
 const useLoading = ({ show, image = 'loading', background = '' }) => {
   const { src, bgColor = '' } = getImage(image)

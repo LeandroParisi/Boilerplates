@@ -1,13 +1,40 @@
 import {
   faAngleDown,
-  faAngleUp, faArrowLeft, faArrowRight, faBan, faBoxes, faCalendarAlt, faCalendarCheck, faCheck,
-  faClock, faCog, faDollarSign, faEdit, faEllipsisH,
-  faEllipsisV, faFileAlt, faFileSignature, faHandHoldingUsd, faIdBadge, faListUl, faLock,
-  faLockOpen, faMapMarkerAlt, faMinus, faMoneyBillWave, faPhoneAlt, faPlus, faReceipt, faSearchDollar, faStopwatch, faStore, faTimes, faTrash, faTruckLoading, faUser
+  faAngleUp,
+  faArrowLeft,
+  faArrowRight,
+  faBan,
+  faBoxes,
+  faCalendarAlt,
+  faCalendarCheck,
+  faCheck,
+  faClock,
+  faCog,
+  faDollarSign,
+  faEdit,
+  faEllipsisH,
+  faEllipsisV,
+  faFileAlt,
+  faFileSignature,
+  faHandHoldingUsd,
+  faIdBadge,
+  faListUl,
+  faLock,
+  faLockOpen,
+  faMapMarkerAlt,
+  faMinus,
+  faMoneyBillWave,
+  faPhoneAlt,
+  faPlus,
+  faReceipt,
+  faSearchDollar,
+  faStopwatch,
+  faStore,
+  faTimes,
+  faTrash,
+  faTruckLoading,
+  faUser
 } from '@fortawesome/free-solid-svg-icons'
-
-import { paymentMethods } from 'shared/interfaces/paymentMethods/methods'
-import { attributes } from 'shared/interfaces/products/productsInterface'
 
 export const menuIcons = {
   STORE: faStore,
@@ -68,9 +95,9 @@ export const groupedIcons = {
   ...entityMenuIcons,
 }
 
-export const customIcons = new Set([paymentMethods.PIX])
+// export const customIcons = new Set([paymentMethods.PIX])
 
-export const attributesWithoutQuantity = new Set([attributes.SIZES])
+// export const attributesWithoutQuantity = new Set([attributes.SIZES])
 
 export const getIcon = (iconName) => groupedIcons[iconName] || faBan
 
@@ -88,7 +115,7 @@ export const tooltips = {
   truck: 'Delivery',
   hands: 'Retirada',
   store: 'Consumo no local',
-  [paymentMethods.PIX]: 'Pix',
+  // [paymentMethods.PIX]: 'Pix',
   trash: 'Deletar',
 
   utensils: 'Comida',

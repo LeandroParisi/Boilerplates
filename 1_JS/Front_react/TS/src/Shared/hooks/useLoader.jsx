@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
 import Loader from 'assets/Loaders/Loader'
-import { getImage } from '../../assets/Loaders/loaderDictionary'
+import { useEffect, useState } from 'react'
+import { getImage } from '../../Assets/Loaders/loaderDictionary'
 
 const useLoader = (image) => {
   const [display, setDisplay] = useState(true)
