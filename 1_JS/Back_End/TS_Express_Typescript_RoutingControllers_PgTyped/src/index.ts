@@ -1,6 +1,7 @@
-/* eslint-disable @typescript-eslint/no-floating-promises */
-import { Server } from './Server'
+/* eslint-disable max-classes-per-file */
+import 'reflect-metadata'
+import { Server } from './Server/Server'
 
-const server : Server = new Server()
-
-server.Start()
+const app = new Server()
+app.Start()
+app.Run()
